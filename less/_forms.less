@@ -1,0 +1,214 @@
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  textarea{
+    border: 1px solid @gray-dark-color;
+    .unitize-padding(15,10);
+    .unitize-margin(0,0,30,0);
+    width: 100%;
+
+    &:focus,
+    &:active{
+      outline: 0;
+    }
+  }
+
+  .select-wrap{
+    position: relative;
+    &:after{
+      .font-icons;
+      content: "\e901";
+      position: absolute;
+      .unitize(right,11);
+      .unitize(top,16);
+      pointer-events: none;
+    }
+  }
+
+  select{
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    .unitize-margin(0,0,30,0);
+    border: 1px solid @gray-dark-color;
+    .unitize-padding(15,30,15,10);
+    color: @placeholder-color;
+    background: #ffffff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    &:focus,
+    &:active{
+      outline: 0;
+    }
+  }
+
+  .checkbox-wrap{
+    position: relative;
+    input[type="checkbox"]{
+      position: absolute;
+      left: 0;
+    }
+    .control-label{
+      .unitize-margin(3,0,0,40);
+    }
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    border: 1px solid @gray-dark-color;
+    padding: 9px;
+    .unitize-width(25);
+    .unitize-height(25);
+    display: inline-block;
+    position: relative;
+    &:focus,
+    &:active{
+      outline: 0;
+    }
+  }
+  input[type="radio"]{
+    border-radius: 50%;
+    .unitize(margin-bottom, -6);
+  }
+
+  input[type="radio"]:checked:after,
+  input[type="checkbox"]:checked:after {
+    .font-icons;
+    content: "\e904";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    .unitize(font-size, 20);
+  }
+
+  .input[type="checkbox"]:checked {
+    background-color: #e9ecee;
+    color: #99a1a7;
+    border: 1px solid #adb8c0;
+  }
+
+  .input[type="checkbox"]:active,
+  .input[type="checkbox"]:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+  }
+
+  button{
+    &:focus,
+    &:active{
+      outline: 0;
+    }
+  }
+
+  .form-headline{
+    .unitize(font-size, 20);
+    .unitize(line-height, 21);
+    .unitize-margin(0,0,25,0);
+    font-weight: 400;
+  }
+
+  .control-label{
+    display: inline-block;
+    .unitize(font-size, 16);
+    .unitize(line-height, 22);
+    a{
+      text-decoration: underline;
+      font-weight: normal;
+    }
+  }
+
+  .selectric{
+    .unitize-margin(0,0,30,0);
+    border: 1px solid @gray-dark-color;
+
+    .label{
+      .unitize-height(45);
+      .unitize(line-height, 45);
+      color: @placeholder-color;
+    }
+    .button{
+      min-width: 0;
+      box-shadow: none;
+      &:after{
+        .font-icons;
+        content: "\e90a";
+        color: @text-color;
+        .unitize(font-size, 16);
+        height: auto;
+        width: auto;
+        border: none;
+      }
+    }
+  }
+
+  .datepicker-wrapper{
+    .datepicker{
+      .unitize(padding-right, 40);
+    }
+    &:after{
+      .font-icons;
+      content: "\e90d";
+      position: absolute;
+      .unitize(top, 8);
+      .unitize(right, 30);
+      .unitize(font-size, 30);
+    }
+  }
+
+  .form-info,
+  .checkbox-wrap,
+  .radio-group{
+    .unitize-margin(0,0,25,0);
+  }
+
+  .radio-wrap{
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  textarea{
+  }
+
+  button{
+  }
+
+  .form-info,
+  .required-info{
+    .unitize(font-size, 12);
+  }
+  .form-info{
+    .unitize(line-height, 17);
+  }
+
+  .required-info{
+    float: right;
+    .unitize(line-height, 21);
+    position:absolute;
+    .unitize(top, -25);
+    @media screen and (min-width: @screen-sm){
+      position:static;
+      top: auto;
+    }
+  }
+
+  .parsley-errors-list{
+    list-style: none;
+    color: @alert-color;
+    .unitize-margin(-20,0,30,0);
+    padding: 0;
+  }
+
+  .radio-wrap + .parsley-errors-list{
+    display: inline-block;
+    .unitize(margin-left, 10);
+  }
+

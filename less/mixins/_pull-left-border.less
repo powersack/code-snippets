@@ -1,0 +1,36 @@
+
+.pull-left-margin{
+  .unitize(margin-left, (@bootstrap-margin + 1) * -1);
+  //.unitize(margin-right, (@bootstrap-margin + 1) * -1);
+}
+
+.pull-left-margin-double{
+  .unitize(margin-left, @bootstrap-margin * -2);
+  //.unitize(margin-right, @bootstrap-margin * -2);
+}
+
+.pull-left-margin-content{
+  .pull-left-margin;
+  background: #ffffff;
+}
+
+.pull-left-margin-double-content{
+  .pull-left-margin-double;
+  background: #ffffff;
+}
+
+.push-right-padding{
+    .unitize(padding-left, @bootstrap-margin);
+}
+
+//eine spalte nach links
+.pull-left-margin-col{
+  .unitize(margin-left, -51);
+  @media screen and (min-width: @screen-xl-min) {
+    .unitize(margin-left, -102);
+  }
+  .editmode &{
+    position: relative;
+    margin-left: inherit;
+  }
+}

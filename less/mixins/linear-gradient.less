@@ -1,0 +1,13 @@
+
+.linear-gradient(@start, @end) {
+	background-color: @start;
+	background-image: linear-gradient(to bottom, @start 0%, @end 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{start}', endColorstr='@{end}',GradientType=0 );
+}
+.linear-gradient-horizontal(@start, @end) {
+	background-image: linear-gradient(to right, @start 0%, @end 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{start}', endColorstr='@{end}',GradientType=0 );
+}
+.linear-gradient-multi(@firstPos, @firstColor, @secondPos, @secondColor, @thirdPos, @thirdColor, @startFrom: top, @endTo: bottom) {
+	background-image: linear-gradient(to @endTo, @firstColor @firstPos,@secondColor @secondPos,@thirdColor @thirdPos);
+}

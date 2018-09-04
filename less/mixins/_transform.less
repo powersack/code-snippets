@@ -1,0 +1,14 @@
+.transform-translate(@x , @y) {
+  -webkit-transform: translate(~"@{x}px", ~"@{y}px");
+  -moz-transform: translate(~"@{x}px", ~"@{y}px");
+  -ms-transform: translate(~"@{x}px", ~"@{y}px");
+  -o-transform: translate(~"@{x}px", ~"@{y}px");
+  transform: translate(~"@{x}px", ~"@{y}px");
+}
+.transform(@transformation) {
+  -webkit-transform: @transformation;
+  -moz-transform: @transformation;
+  -o-transform: @transformation;
+  -ms-transform: @transformation;
+  transform: @transformation;
+}
